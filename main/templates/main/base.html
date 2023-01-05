@@ -1,0 +1,49 @@
+<!doctype html>
+{% load static %}
+<html>
+<head>
+<title>部落格</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="{% static 'main/css/main.css' %}">
+{% block css %}{% endblock %}
+</head>
+<body>
+{% include 'main/menu.html' %}
+<div class="container-fluid p-2 bg-info text-white text-center">
+  <h2>部落格 -- {% block heading %}{% endblock %}</h2>
+</div>
+{% block content %}{% endblock %}
+<div class="container mt-5">
+  <div class="row">
+    <div class="col-sm-4">
+      <h3>第一欄</h3>
+<p class="navbar"><h3>{{ like }}{{ time }}</h3>
+<p class="applylarge applyred">這是多重 Class 的例子。</p>
+<b class="special">同一個選擇器</b>可以<i class="special">有不同的 instance。</i>
+    </div>
+    <div class="col-sm-4">
+      <h3>第二欄</h3>
+<p class="navbar"><p>這是用 Class 選擇器的例子。</p>
+<p id="footer">這是用 ID 選擇器的例子。</p>
+<p>{{ like }}</p>
+    </div>
+    <div class="col-sm-4">
+      <h3>第三欄</h3>
+ <p>這是林至丞(Jason)第一次用Django做好的部落格!</p>
+ <b class="special">同一個選擇器</b>可以<i class="special">有不同的 instance。</i>
+ <div class="large">這是 DIV 範例。</div>
+    </div>
+  </div>
+</div>
+
+{% for message in messages %}
+ <p class="{{ message.tags }}">{{ message }}</p>
+{% endfor %}
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+{% block script %}{% endblock %}
+</body>
+</html>
