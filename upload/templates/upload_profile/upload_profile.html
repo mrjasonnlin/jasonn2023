@@ -1,0 +1,11 @@
+{% extends 'main/base.html' %}
+{% load static %}
+{% block heading %}
+首頁
+<button type="button" class="btn btn-primary"><a href="{% url 'upload_profile:add' %}">簽到簿</a></button>
+<button type="button" class="btn btn-primary"><a href="{% url 'upload_profile:detail' %}">查看簽到簿</a></button>
+{% endblock %}
+{% block content %}
+    <br>
+    <p style="background-color:Orange;">這是主要內容</p>
+{% endblock %}

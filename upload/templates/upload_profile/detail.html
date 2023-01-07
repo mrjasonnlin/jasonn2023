@@ -1,0 +1,22 @@
+{% extends 'main/base.html' %}
+{% load static %}
+{% block heading %}
+<button type="button" class="btn btn-primary"><a href="{% url 'upload_profile:add' %}">簽到簿</a></button>
+<button type="button" class="btn btn-primary"><a href="{% url 'upload_profile:detail' %}">查看簽到簿</a></button>
+{% endblock %}
+
+{% block content %}
+
+    {% for user in list_user %}
+        <h5>{{ user.user_name }}</h5>
+        <p><img src="/static{{ user.user_image.url }}" alt=""  width="100" height="150"></p>
+        <!--<img src="/static/main/img/bike.jpg" alt=""  width="50" height="60"> -->
+        <div>
+            {% for line in user.introduce.readlines %}
+                <p>{{ line.decode }}</p>
+            {% endfor %}
+
+        </div>
+
+    {% endfor %}
+{% endblock %}

@@ -1,0 +1,43 @@
+{% extends 'main/base.html' %}
+{% load static %}
+{% block css %}
+<link rel="stylesheet" href="{% static 'article/css/article.css' %}">
+{% endblock %}
+{% block heading %}留言板{% endblock %}
+{% block content %}
+{% include 'article/searchForm.html' %}
+{% if user.is_superuser %}
+  <p class="inlineBlock"><a class="btn" href="{% url 'article:articleCreate' %}">新增文章</a></p>
+  <br><br>
+{% endif %}
+<hr>
+
+{% for article, comments in articles.items %}
+  <h3 class="inlineBlock"><a href="{% url 'article:articleRead' article.id %}">{{ article.title }}</a></h3>
+  {% if user.is_superuser %}
+    <form class="inlineBlock" method="post" action="{% url 'article:articleDelete' article.id %}">
+      {% csrf_token %}
+      <input class="btn deleteConfirm" type="submit" value="刪除">
+    </form>
+  {% endif %}
+  <p>發表時間：{{ article.pubDateTime|date:'Y-m-d H:i' }}</p>
+  <div class="articleContent">{{ article.content|linebreaks|truncatechars_html:30 }}</div>
+  <p class=like>
+    <img id=like src="{% static 'main/img/like.png' %}" alt="Like"> {{ article.likes.count }}
+  </p>
+  {% for comment in comments %}
+    <div class="commentDiv">
+      <span class="commentAuthor">{{ comment.user.fullName }}</span>
+      <span class="comment">{{ comment.content }}</span>
+      <br>
+      <span class="commentTime">{{ comment.pubDateTime|date:'m月d日 H:i' }}</span>
+    </div>
+  {% endfor %}
+  <hr>
+{% endfor %}
+
+{% endblock %}
+{% block script %}
+<script src="{% static 'main/js/deleteConfirm.js' %}"></script>
+{% endblock %}
+

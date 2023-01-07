@@ -1,0 +1,21 @@
+{% extends 'main/base.html' %}
+{% load static %}
+{% block heading %}
+<button type="button" class="btn btn-primary"><a href="{% url 'upload_profile:add' %}">簽到簿</a></button>
+<button type="button" class="btn btn-primary"><a href="{% url 'upload_profile:detail' %}">查看簽到簿</a></button>
+{% endblock %}
+
+{% block content %}
+    <form action="/upload_profile/add/" enctype="multipart/form-data" method="post">
+        {% csrf_token %} <!--防止跨站請求偽造-->
+        <br>
+        <label for="user_name">名字:</label>
+        <input type="text" name="user_name"><br><br>
+        <label for="user_image">大頭貼:(.png)</label><br>
+        <input type="file" name="user_image"><br><br>
+        <label for="introduce">自我介紹:(.txt)</label><br>
+        <input type="file" name="introduce"><br><br>
+        <input type="submit" value="提交">
+
+    </form>
+{% endblock %}
