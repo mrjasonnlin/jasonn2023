@@ -1,6 +1,8 @@
 from django.shortcuts import render
-
+from django.contrib import messages
+from django.urls.base import reverse
 
 # Create your views here.
 def index(request):
+    context = {'like': 'Django 很棒'}
     return render(request, 'render/index.html', {})
