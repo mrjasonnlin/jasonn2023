@@ -1,0 +1,20 @@
+databases:
+  - name: blogdb2
+    databaseName: blogdb2
+    user: blog
+
+services:
+  - type: web
+    name: blog
+    env: python
+    buildCommand: "./build.sh"
+    startCommand: "gunicorn blog.wsgi:application"
+    envVars:
+      - key: DATABASE_URL
+        fromDatabase:
+          name: blogdb2
+          property: connectionString
+      - key: SECRET_KEY
+        generateValue: true
+      - key: WEB_CONCURRENCY
+        value: 4

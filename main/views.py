@@ -2,8 +2,13 @@ from django.shortcuts import render, redirect
 from django.contrib import messages
 from django.urls.base import reverse
 
-def main(request):
+def index(request):
     return render(request, 'main/main.html', {})
+    """
+    Render the main page
+    """
+    context = {'like': 'Django 很棒'}
+    return render(request, 'main/main.html', context)
 #def main(request):
 #    """
 #    Render the main page

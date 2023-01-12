@@ -6,3 +6,9 @@ from django.urls.base import reverse
 def index(request):
     context = {'like': 'Django 很棒'}
     return render(request, 'render/index.html', {})
+
+def bike(request):
+    """
+    Render the bike page
+    """
+    return render(request, 'render/bike.html')
