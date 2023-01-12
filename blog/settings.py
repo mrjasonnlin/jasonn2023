@@ -38,7 +38,7 @@ if RENDER_EXTERNAL_HOSTNAME:
 
 INSTALLED_APPS = [
     'render.apps.RenderConfig',
-    'main.apps.MainConfig',
+#    'main.apps.MainConfig',
 #    'account.apps.AccountConfig',
 #    'article.apps.ArticleConfig',
 #    'upload.apps.UploadConfig',
