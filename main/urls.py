@@ -8,7 +8,8 @@ urlpatterns = [
 #    path('', include('render.urls')),
     path('', views.index, name='index'),
 #    path('main/', include('main.urls')),
-#    path('about/', views.about, name='about'),
+    path('about/', views.about, name='about'),
     path('bike/', views.bike, name='bike'),
+    path('main/', views.main, name='main'),
 ]
 
