@@ -9,6 +9,6 @@ urlpatterns = [
     path('', views.index, name='index'),
 #    path('main/', include('main.urls')),
 #    path('about/', views.about, name='about'),
-#    path('bike/', views.bike, name='bike'),
+    path('bike/', views.bike, name='bike'),
 ]
 

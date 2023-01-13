@@ -24,11 +24,11 @@ def index(request):
 #    return render(request, 'main/about.html')
 
 
-#def bike(request):
-#    """
-#    Render the bike page
-#    """
-#    return render(request, 'main/bike.html')
+def bike(request):
+    """
+    Render the bike page
+    """
+    return render(request, 'main/bike.html')
 
 
 #def admin_required(func):
