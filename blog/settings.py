@@ -49,6 +49,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'main',
+#    'upload_profile',
   #  'article',
   #  'account',
 ]
