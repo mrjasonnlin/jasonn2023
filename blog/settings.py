@@ -38,20 +38,17 @@ if RENDER_EXTERNAL_HOSTNAME:
 
 INSTALLED_APPS = [
     'render.apps.RenderConfig',
-#    'main.apps.MainConfig',
-#    'account.apps.AccountConfig',
-#    'article.apps.ArticleConfig',
-#    'upload.apps.UploadConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'account',
     'main',
 #    'upload_profile',
   #  'article',
-#    'account',
+
 ]
 
 MIDDLEWARE = [
@@ -93,14 +90,14 @@ DATABASES = {
     'default': dj_database_url.config(
         # Feel free to alter this value to suit your needs.
         # default='postgres://blog_76vf_user:w3phXO95ZMzkdyOr5VW3fzypEZr2WLDd@dpg-cel3rshgp3jlcsmpkjb0-a/blog_76vf',
-        default='postgresql://blog:blog@localhost:5433/blogdb2',
+        default='postgresql://blog:blog@localhost:5433/blogdb4',
         # default='postgresql://postgres:postgres@localhost:5432/mysite',
         conn_max_age=600,
 
     )
 }
 
-
+AUTH_USER_MODEL = 'account.User'
 # Password validation
 # https://docs.djangoproject.com/en/3.2/ref/settings/#auth-password-validators
 
@@ -133,7 +130,7 @@ USE_L10N = True
 
 USE_TZ = True
 
-
+LOGIN_URL = '/account/login/'
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
 
