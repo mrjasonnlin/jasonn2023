@@ -51,7 +51,7 @@ INSTALLED_APPS = [
     'main',
 #    'upload_profile',
   #  'article',
-  #  'account',
+#    'account',
 ]
 
 MIDDLEWARE = [
