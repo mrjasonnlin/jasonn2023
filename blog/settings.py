@@ -47,7 +47,7 @@ INSTALLED_APPS = [
     'account',
     'main',
 #    'upload_profile',
-    'article',
+#    'article',
 
 ]
 
