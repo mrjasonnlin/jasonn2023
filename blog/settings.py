@@ -47,7 +47,7 @@ INSTALLED_APPS = [
     'account',
     'main',
 #    'upload_profile',
-  #  'article',
+    'article',
 
 ]
 
@@ -89,9 +89,7 @@ WSGI_APPLICATION = 'blog.wsgi.application'
 DATABASES = {
     'default': dj_database_url.config(
         # Feel free to alter this value to suit your needs.
-        # default='postgres://blog_76vf_user:w3phXO95ZMzkdyOr5VW3fzypEZr2WLDd@dpg-cel3rshgp3jlcsmpkjb0-a/blog_76vf',
         default='postgresql://blog:blog@localhost:5433/blogdb4',
-        # default='postgresql://postgres:postgres@localhost:5432/mysite',
         conn_max_age=600,
 
     )
