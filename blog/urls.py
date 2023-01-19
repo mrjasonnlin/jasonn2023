@@ -25,7 +25,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('render.urls')),
 #    path('', include('upload_profile.urls')),
-#    path('account/', include('account.urls', namespace='account')),
+    path('account/', include('account.urls', namespace='account')),
 #    path('article/', include('article.urls', namespace='article')),
 #    path('upload/', include('upload.urls', namespace='upload')),
 #    path('main/', include('main.urls', namespace='main')),

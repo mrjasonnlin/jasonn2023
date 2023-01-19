@@ -4,10 +4,11 @@ from django.urls.base import reverse
 
 
 def index(request):
-    return render(request, 'main/main.html', {})
     """
     Render the main page
     """
+#    return render(request, 'main/main.html', {})
+
     context = {'like': 'Django 很棒'}
     return render(request, 'main/main.html', context)
 
