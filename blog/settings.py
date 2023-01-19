@@ -90,7 +90,7 @@ DATABASES = {
     'default': dj_database_url.config(
         # Feel free to alter this value to suit your needs.
         # default='postgres://blog_76vf_user:w3phXO95ZMzkdyOr5VW3fzypEZr2WLDd@dpg-cel3rshgp3jlcsmpkjb0-a/blog_76vf',
-        default='postgresql://blog:blog@localhost:5433/blogdb2',
+        default='postgresql://blog:blog@localhost:5433/blogdb4',
         # default='postgresql://postgres:postgres@localhost:5432/mysite',
         conn_max_age=600,
 
@@ -135,9 +135,16 @@ LOGIN_URL = '/account/login/'
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
 
 STATIC_URL = '/static/'
-STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+if not DEBUG:
+    # Tell Django to copy statics to the `staticfiles` directory
+    # in your application directory on Render.
+    STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+
+    # Turn on WhiteNoise storage backend that takes care of compressing static files
+    # and creating unique names for each version so they can safely be cached forever.
+    STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
-STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+
