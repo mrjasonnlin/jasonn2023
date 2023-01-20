@@ -46,7 +46,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'account',
     'main',
-    'upload_profile',
+#    'upload_profile',
     'article',
 
 ]
