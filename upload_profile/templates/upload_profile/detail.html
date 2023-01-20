@@ -9,7 +9,7 @@
 
     {% for user in list_user %}
         <h5>{{ user.user_name }}</h5>
-        <p><img src="/static{{ user.user_image.url }}" alt=""  width="100" height="150"></p>
+        <p><img src="{{ user.user_image.url }}" alt=""  width="100" height="150"></p>
         <!--<img src="/static/main/img/bike.jpg" alt=""  width="50" height="60"> -->
         <div>
             {% for line in user.introduce.readlines %}
