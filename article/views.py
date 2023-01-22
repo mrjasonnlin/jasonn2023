@@ -1,23 +1,25 @@
 from django.contrib import messages
 from django.db.models.query_utils import Q
-from django.contrib.auth.decorators import login_required
+# from django.contrib.auth.decorators import login_required
 from django.shortcuts import render, redirect, get_object_or_404
 
 from article.forms import ArticleForm
 from article.models import Article, Comment
-from main.views import admin_required
+
+
+# from main.views import admin_required
 
 
 def article(request):
     """
     Render the article page
     """
-    articles = {article:Comment.objects.filter(article=article) for article in Article.objects.all()}
+    articles = {article: Comment.objects.filter(article=article) for article in Article.objects.all()}
     context = {'articles': articles}
     return render(request, 'article/article.html', context)
 
 
-#@admin_required
+# @admin_required
 def articleCreate(request):
     """
     Create a new article instance
@@ -56,7 +58,7 @@ def articleRead(request, articleId):
     return render(request, 'article/articleRead.html', context)
 
 
-#@admin_required
+# @admin_required
 def articleUpdate(request, articleId):
     """
     Update the article instance:
@@ -66,7 +68,7 @@ def articleUpdate(request, articleId):
            * validate the form and render a bound form if the form is invalid
            * else, save it to the model and redirect to the articleRead page
     """
-    
+
     article = get_object_or_404(Article, id=articleId)
     template = 'article/articleCreateUpdate.html'
     if request.method == 'GET':
@@ -79,11 +81,11 @@ def articleUpdate(request, articleId):
         return render(request, template, {'articleForm': articleForm})
 
     articleForm.save()
-    messages.success(request, '文章已修改') 
+    messages.success(request, '文章已修改')
     return redirect('article:articleRead', articleId=articleId)
 
 
-#@admin_required
+# @admin_required
 def articleDelete(request, articleId):
     """
     Delete the article instance:
@@ -96,7 +98,7 @@ def articleDelete(request, articleId):
     # POST
     article = get_object_or_404(Article, id=articleId)
     article.delete()
-    messages.success(request, '文章已刪除')  
+    messages.success(request, '文章已刪除')
     return redirect('article:article')
 
 
@@ -113,7 +115,7 @@ def articleSearch(request):
     return render(request, 'article/articleSearch.html', context)
 
 
-#@login_required
+# @login_required
 def articleLike(request, articleId):
     """
     Add the user to the 'likes' field:
@@ -127,7 +129,7 @@ def articleLike(request, articleId):
     return articleRead(request, articleId)
 
 
-#@login_required
+# @login_required
 def commentCreate(request, articleId):
     """
     Create a comment for an article:
@@ -149,7 +151,7 @@ def commentCreate(request, articleId):
     return redirect('article:articleRead', articleId=articleId)
 
 
-#@login_required
+# @login_required
 def commentUpdate(request, commentId):
     """
     Update a comment:
@@ -177,7 +179,7 @@ def commentUpdate(request, commentId):
     return redirect('article:articleRead', articleId=article.id)
 
 
-#@login_required
+# @login_required
 def commentDelete(request, commentId):
     """
     Delete a comment:

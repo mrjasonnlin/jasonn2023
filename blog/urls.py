@@ -18,18 +18,19 @@ from django.urls import include, path
 # from main import views
 from django.conf.urls.static import static
 from django.conf import settings
+
 # from blog.settings import MEDIA_ROOT
 # from django.views.static import serve
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
-    path('', include('render.urls')),
-#    path('upload_profile/', include('upload_profile.urls', namespace='upload_profile')),
-    path('account/', include('account.urls', namespace='account')),
-    path('article/', include('article.urls', namespace='article')),
-#    path('upload/', include('upload.urls', namespace='upload')),
-#    path('main/', include('main.urls', namespace='main')),
-#    path('main/', include('main.urls')),
-#    re_path('.*', views.main),
-] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+                  path('admin/', admin.site.urls),
+                  path('', include('render.urls')),
+                  #    path('upload_profile/', include('upload_profile.urls', namespace='upload_profile')),
+                  path('account/', include('account.urls', namespace='account')),
+                  path('article/', include('article.urls', namespace='article')),
+                  #    path('upload/', include('upload.urls', namespace='upload')),
+                  #    path('main/', include('main.urls', namespace='main')),
+                  #    path('main/', include('main.urls')),
+                  #    re_path('.*', views.main),
+              ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 # urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
