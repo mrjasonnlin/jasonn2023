@@ -25,7 +25,7 @@ from django.conf import settings
 urlpatterns = [
                   path('admin/', admin.site.urls),
                   path('', include('render.urls')),
-                  #    path('upload_profile/', include('upload_profile.urls', namespace='upload_profile')),
+                  path('upload_profile/', include('upload_profile.urls', namespace='upload_profile')),
                   path('account/', include('account.urls', namespace='account')),
                   path('article/', include('article.urls', namespace='article')),
                   #    path('upload/', include('upload.urls', namespace='upload')),
