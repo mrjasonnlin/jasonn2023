@@ -13,12 +13,12 @@
 <hr>
 {% for article, comments in articles.items %}
   <h3 class="inlineBlock"><a href="{% url 'article:articleRead' article.id %}">{{ article.title }}</a></h3>
-
+  {% if user.is_superuser %}
     <form class="inlineBlock" method="post" action="{% url 'article:articleDelete' article.id %}">
-
+      {% csrf_token %}
       <input class="btn deleteConfirm" type="submit" value="刪除">
     </form>
-
+  {% endif %}
   <p>發表時間：{{ article.pubDateTime|date:'Y-m-d H:i' }}</p>
   <div class="articleContent">{{ article.content|linebreaks|truncatechars_html:30 }}</div>
   <p class=like>
