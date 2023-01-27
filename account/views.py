@@ -6,7 +6,6 @@ from django.contrib.auth import logout as auth_logout
 from django.contrib.auth.decorators import login_required
 from account.forms import UserForm
 
-
 def register(request):
     """
     Register a new user

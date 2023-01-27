@@ -1,6 +1,7 @@
 from django.shortcuts import render, redirect
 from django.contrib import messages
 from django.urls.base import reverse
+from account.models import User
 
 
 def index(request):
@@ -43,3 +44,13 @@ def admin_required(func):
         return func(request, *args, **kwargs)
 
     return auth
+
+
+
+
+def users(request):
+    users = User.objects.all()
+    """
+    Register a new user
+    """
+    return render(request, 'main/users.html', {'users':users})
