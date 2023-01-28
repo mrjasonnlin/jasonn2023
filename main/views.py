@@ -8,7 +8,7 @@ def index(request):
     """
     Render the main page
     """
-#    return render(request, 'main/main.html', {})
+    #    return render(request, 'main/main.html', {})
 
     context = {'like': 'Django 很棒'}
     return render(request, 'main/main.html', context)
@@ -46,11 +46,6 @@ def admin_required(func):
     return auth
 
 
-
-
 def users(request):
     users = User.objects.all()
-    """
-    Register a new user
-    """
-    return render(request, 'main/users.html', {'users':users})
+    return render(request, 'main/users.html', {'users': users})
