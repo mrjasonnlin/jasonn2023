@@ -21,18 +21,18 @@
       <h3>第一欄</h3>
 <p class="navbar"><h3>{{ like }}{{ time }}</h3>
 <p class="applylarge applyred">這是多重 Class 的例子。</p>
-<b class="special">同一個選擇器</b>可以<i class="special">有不同的 instance。</i>
+<b class="special">同一個選擇器(ex: .btn)</b>可以<i class="special">有不同的 instance(物件)。</i>
     </div>
     <div class="col-sm-4">
       <h3>第二欄</h3>
-<p class="navbar">這是用 Class 選擇器的例子。</p>
-<p id="footer">這是用 ID 選擇器的例子。</p>
+<p class="navbar"> ID 選擇器在一個 HTML 文件中只能被使用一次，而 Class 選擇器在一個 HTML 文件中可以被使用多次。</p>
+<p id="footer">這是用 ID 選擇器(#footer)的例子，選擇器建議盡量用 Class，因為這樣子最靈活。</p>
 <p>{{ like }}</p>
     </div>
     <div class="col-sm-4">
       <h3>第三欄</h3>
- <p>這是Jason第一次用Django做好的部落格!</p>
- <b class="special">同一個選擇器</b>可以<i class="special">有不同的 instance。</i>
+ <p class="special">這是Jason第一次用Django做好的部落格!</p>
+ <b class="special">Class 名稱及 ID 名稱都是對大小寫敏感的。</b>舉例來說，<i class="special">.classone 及 .ClassOne 是代表兩個不同的 Class 選擇器。</i>
  <div class="large">這是 DIV 範例。</div>
     </div>
   </div>
