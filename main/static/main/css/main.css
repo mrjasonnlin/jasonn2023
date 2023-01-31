@@ -18,6 +18,24 @@ ul#menu li {
   display: inline-block;
 }
 
+.applylarge {
+  font-size: 1.8em;
+  }
+.applyred{
+  color: red;
+  }
+.special{
+    font-size: 1.8em;
+    color: red;
+  }
+.navbar{
+    font-size: 1.8em;
+    color: red;
+  }
+#footer{
+    font-size: 0.8em;
+    color: blue;
+ }
 /* Button */
 .btn {
   font-family: Arial;
