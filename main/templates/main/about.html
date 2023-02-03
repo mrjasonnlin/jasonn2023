@@ -1,6 +1,17 @@
 {% extends 'main/base.html' %}
+{% load static %}
 {% block heading %}關於{% endblock %}
 {% block content %}
     <h2>關於 Jason的部落格</h2>
     <p>歡迎來到Jason的 部落格,你可以到留言版留言</p>
+<h5>我的第一个 JavaScript 程序</h5>
+<p id="demo">这是一个段落</p>
+<button type="button" onclick="displayDate()">显示日期</button>
+{% endblock %}
+{% block script %}
+<script>
+function displayDate(){
+	document.getElementById("demo").innerHTML=Date();
+}
+</script>
 {% endblock %}
