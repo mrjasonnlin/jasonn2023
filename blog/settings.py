@@ -87,8 +87,9 @@ WSGI_APPLICATION = 'blog.wsgi.application'
 DATABASES = {
     'default': dj_database_url.config(
         # Feel free to alter this value to suit your needs.
-        default='postgresql://blog:blog@localhost:5433/blogdb4',
-        conn_max_age=600,
+        default='postgresql://blog:blog@localhost:5432/blogdb',
+        # default='postgresql://blog:blog@localhost:5433/blogdb4',
+      #  conn_max_age=600,
 
     )
 }
