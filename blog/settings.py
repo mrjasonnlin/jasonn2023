@@ -131,6 +131,8 @@ LOGIN_URL = '/account/login/'
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
 
 STATIC_URL = '/static/'
+MEDIA_URL = '/main/media/'  # 訪問文件的URL根目錄
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')  # 上傳文件儲存根目錄
 if not DEBUG:
     # Tell Django to copy statics to the `staticfiles` directory
     # in your application directory on Render.
