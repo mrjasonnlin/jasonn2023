@@ -35,6 +35,12 @@ def bike(request):
     """
     return render(request, 'main/bike.html')
 
+def django(request):
+    """
+    Render the bike page
+    """
+    return render(request, 'main/django.html')
+
 
 def admin_required(func):
     def auth(request, *args, **kwargs):
