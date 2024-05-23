@@ -87,8 +87,8 @@ WSGI_APPLICATION = 'blog.wsgi.application'
 DATABASES = {
     'default': dj_database_url.config(
         # Feel free to alter this value to suit your needs.
-        default='postgresql://blog:blog@localhost:5432/blogdb',
-        # default='postgresql://blog:blog@localhost:5433/blogdb4',
+        # default='postgresql://blog:blog@localhost:5432/blogdb',
+        default='postgresql://blog:blog@localhost:5433/blogdb4',
         # conn_max_age=600,
 
     )
@@ -131,6 +131,10 @@ LOGIN_URL = '/account/login/'
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
 
 STATIC_URL = '/static/'
+
+MEDIA_ROOT = os.path.join(BASE_DIR, "media")
+MEDIA_URL = "/media/"
+
 if not DEBUG:
     # Tell Django to copy statics to the `staticfiles` directory
     # in your application directory on Render.
