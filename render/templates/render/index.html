@@ -33,15 +33,25 @@
             >
 -->
     </a>
+    <div class="card" style="width: 18rem;">
+  <img src="{% static "render/bike.jpg" %}" class="card-img-top" alt="Jsaon的網站">
+  <div class="card-body">
+    <h5 class="card-title">Jsaon的網站</h5>
+    <p class="card-text">Jsaon的網站</p>
+    <a href="https://jasonn2023.onrender.com/" class="btn btn-primary">Jsaon的網站</a>
+  </div>
+</div>
 </header>
 <main class="container">
     <div class="row text-center justify-content-center">
         <div class="col">
             <h1 class="display-4">Jason的網站!</h1>
-            <button type="button" class="btn btn-warning"><a class="text-body" href="{% url 'main:bike' %}">Jason的重機</a></button>
-            <button type="button" class="btn btn-warning"><a class="text-body" href="{% url 'main:main' %}">首頁</a></button>
+            <button type="button" class="btn btn-warning btn-lg btn-block"><a class="text-body" href="{% url 'main:bike' %}">Jason的重機</a></button>
+            <button type="button" class="btn btn-warning btn-lg btn-block"><a class="text-body" href="{% url 'main:main' %}">首頁</a></button>
+            <button type="button" class="btn btn-warning btn-lg btn-block" disabled>禁用</a></button>
         </div>
     </div>
 </main>
+
 </body>
 </html>
