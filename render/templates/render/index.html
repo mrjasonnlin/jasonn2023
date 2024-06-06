@@ -7,12 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <title>Jsaon的網站</title>
-<!--
-    <link rel="stylesheet"
-          href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
-          integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
-          crossorigin="anonymous">
--->
+
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
           integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N"
           crossorigin="anonymous">
@@ -24,6 +19,28 @@
 <body>
 
 <header class="container mt-4 mb-4">
+
+    <div class="card" style="width: 18rem;">
+  <img src="{% static "render/bike.jpg" %}" class="card-img-top" alt="Jason的網站">
+  <div class="card-body">
+    <h5 class="card-title">Jason的網站</h5>
+    <p class="card-text">Jason的網站</p>
+    <a href="https://jasonn2023.onrender.com/" class="btn btn-primary">Jason的網站</a>
+  </div>
+</div>
+
+</header>
+<main class="container">
+    <div class="row text-center justify-content-center">
+        <div class="col">
+            <h1 class="display-4">Jason的網站!</h1>
+            <button type="button" class="btn btn-warning btn-lg btn-block"><a class="text-body" href="{% url 'main:bike' %}">Jason的重機</a></button>
+            <button type="button" class="btn btn-warning btn-lg btn-block"><a class="text-body" href="{% url 'main:main' %}">首頁</a></button>
+            <button type="button" class="btn btn-warning btn-lg btn-block" disabled>禁用</button>
+        </div>
+    </div>
+</main>
+<br>
     <a href="https://jasonn2023.onrender.com/">
         <img src="{% static "render/bike.jpg" %}" alt="Render" class="rounded mx-auto d-block">
 <!--        <img src="{% static "render/bike.jpg" %}" alt="Render"
@@ -33,25 +50,6 @@
             >
 -->
     </a>
-    <div class="card" style="width: 18rem;">
-  <img src="{% static "render/bike.jpg" %}" class="card-img-top" alt="Jsaon的網站">
-  <div class="card-body">
-    <h5 class="card-title">Jsaon的網站</h5>
-    <p class="card-text">Jsaon的網站</p>
-    <a href="https://jasonn2023.onrender.com/" class="btn btn-primary">Jsaon的網站</a>
-  </div>
-</div>
-</header>
-<main class="container">
-    <div class="row text-center justify-content-center">
-        <div class="col">
-            <h1 class="display-4">Jason的網站!</h1>
-            <button type="button" class="btn btn-warning btn-lg btn-block"><a class="text-body" href="{% url 'main:bike' %}">Jason的重機</a></button>
-            <button type="button" class="btn btn-warning btn-lg btn-block"><a class="text-body" href="{% url 'main:main' %}">首頁</a></button>
-            <button type="button" class="btn btn-warning btn-lg btn-block" disabled>禁用</a></button>
-        </div>
-    </div>
-</main>
 
 </body>
 </html>
