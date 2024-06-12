@@ -10,7 +10,7 @@ def index(request):
     """
     #    return render(request, 'main/main.html', {})
 
-    context = {'like': 'Django 很棒'}
+    context = {'like': 'Django 很棒 Django 很棒 Django 很棒'}
     return render(request, 'main/main.html', context)
 
 
@@ -34,6 +34,8 @@ def bike(request):
     Render the bike page
     """
     return render(request, 'main/bike.html')
+
+
 
 def django(request):
     """
