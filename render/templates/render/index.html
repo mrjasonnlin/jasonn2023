@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
           integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N"
           crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static 'render/css/main.css' %}" >
 <!--  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet">
       <link rel="stylesheet" href="{% static 'main/css/main.css' %}">
 -->
@@ -34,6 +35,7 @@
         <div class="col">
             <h1 class="display-4">Jason的網站!</h1>
             <button type="button" class="btn btn-warning btn-lg btn-block"><a class="text-body" href="{% url 'main:bike' %}">Jason的重機</a></button>
+            <button type="button" class="btn btn-warning btn-lg btn-block"><a class="text-body" href="{% url 'main:css' %}">CSS教學</a></button>
             <button type="button" class="btn btn-warning btn-lg btn-block"><a class="text-body" href="{% url 'main:main' %}">首頁</a></button>
             <button type="button" class="btn btn-warning btn-lg btn-block" disabled>禁用</button>
         </div>
