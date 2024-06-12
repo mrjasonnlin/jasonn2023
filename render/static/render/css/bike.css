@@ -2,13 +2,8 @@ html, body {
   margin: 0;
   padding: 20px;
   height: 100%;
-  background: url("/static/main/img/bike.jpg") ;
-  background-repeat: repeat;
-  background-position: center;
-  background-size: 400px 600px;
 }
 
-/*
 body {
   padding: 20px;
   background: url("/static/main/img/bike.jpg") ;
@@ -16,7 +11,7 @@ body {
   background-position: center;
   background-size: 400px 600px;
 }
-*/
+
 ul#menu {
   margin-bottom: 30px;
   text-align: right;
