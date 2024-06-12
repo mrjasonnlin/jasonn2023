@@ -10,7 +10,6 @@ urlpatterns = [
 #    path('main/', include('main.urls')),
     path('about/', views.about, name='about'),
     path('bike/', views.bike, name='bike'),
-    path('csstest/', views.csstest, name='csstest'),
     path('django/', views.django, name='django'),
     path('main/', views.main, name='main'),
     path('users/', views.users, name='users'),
