@@ -18,7 +18,7 @@ ul#menu li {
   display: inline-block;
 }
 
-/* Button */
+/* Button
 .btn {
   font-family: Arial;
   display: inline-block;
@@ -29,6 +29,7 @@ ul#menu li {
   border: thin solid gray;
   background: linear-gradient(#f7f7f7, #dedede);
 }
+*/
 
 /* Messages */
 .success, .error {

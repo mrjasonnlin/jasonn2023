@@ -5,10 +5,10 @@ html, body {
 
 body {
   padding: 20px;
-  background: url("/static/main/img/background.png") fixed;
+  background: url("main/img/background.png") fixed;
   background-repeat: repeat;
 }
-
+/* 說明 */
 ul#menu {
   margin-bottom: 30px;
   text-align: right;
@@ -19,7 +19,7 @@ ul#menu li {
 }
 
 .applylarge {
-  font-size: 0.8em;
+  font-size: 1.8em;
   }
 .applyred{
   color: red;
@@ -30,7 +30,7 @@ ul#menu li {
   }
 .navbar{
     font-size: 0.8em;
-    color: red;
+    color: blue;
   }
 #footer{
     font-size: 0.8em;
@@ -68,3 +68,15 @@ ul#menu li {
   display: inline-block;
 }
 
+.red {
+  color: #f33;
+}
+
+.yellow-bg {
+  background: #ffa;
+}
+
+.fancy {
+  font-weight: bold;
+  text-shadow: 4px 4px 3px #77f;
+}
