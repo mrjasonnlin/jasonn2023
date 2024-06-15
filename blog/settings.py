@@ -131,6 +131,10 @@ LOGIN_URL = '/account/login/'
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
 
 STATIC_URL = '/static/'
+# BASE_DIR 是项目的绝对地址
+#STATIC_ROOT = os.path.join(BASE_DIR, 'collect_static')
+#以下不是必须的  各个app共用的文件可以放在这
+#STATICFILES_DIRS = (os.path.join(BASE_DIR, 'common_static'),)
 
 MEDIA_ROOT = os.path.join(BASE_DIR, "media")
 MEDIA_URL = "/media/"
