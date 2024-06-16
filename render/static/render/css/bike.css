@@ -6,7 +6,7 @@ html, body {
 
 body {
   padding: 20px;
-  background: url("main/img/background.png") ;
+  background: url("render/img/background.png") ;
   background-repeat: repeat;
   background-position: center;
   background-size: 400px 600px;
