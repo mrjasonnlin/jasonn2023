@@ -12,7 +12,6 @@ def bike(request):
     """
     return render(request, 'render/bike.html')
 
-
 def main(request):
     """
     Render the main page

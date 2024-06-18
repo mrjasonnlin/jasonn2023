@@ -35,6 +35,12 @@ def bike(request):
     """
     return render(request, 'main/bike.html')
 
+def csstest(request):
+    """
+    Render the bike page
+    """
+    return render(request, 'main/csstest.html')
+
 
 
 def django(request):

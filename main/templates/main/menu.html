@@ -1,6 +1,7 @@
 <ul id="menu">
   <li><button type="button" class="btn btn-primary"><a href="{% url 'main:main' %}">首頁</a></button></li>
   <li><button type="button" class="btn btn-primary"><a href="{% url 'main:about' %}">關於</a></button></li>
+  <li><button type="button" class="btn btn-primary"><a href="{% url 'main:csstest' %}">CSS練習</a></button></li>
   <li><button type="button" class="btn btn-primary"><a href="{% url 'article:article' %}">留言板</a></button></li>
   <li><button type="button" class="btn btn-primary"><a href="http://127.0.0.1:8000/admin/">admin</a></button></li>
   {% if user.is_authenticated %}
