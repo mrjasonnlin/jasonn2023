@@ -6,7 +6,7 @@ class User(AbstractUser):
     fullName = models.CharField(max_length=128)
     website = models.URLField(blank=True, null=True)
     address = models.CharField(max_length=128, blank=True, null=True)
+    sex = models.CharField(max_length=10, blank=True, null=True)
 
     def __str__(self):
         return self.fullName + ' (' + self.username + ')'
-

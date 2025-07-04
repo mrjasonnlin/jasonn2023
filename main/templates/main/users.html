@@ -6,7 +6,7 @@
 
 {% block content %}
 {% for user in users %}
-    <p>帳號: {{ user }}, 網址:{{ user.website }}, 住址:{{ user.address }}</p>
+    <p>帳號: {{ user }}, 網址:{{ user.website }}, 住址:{{ user.address }}, 性別:{{ user.sex }}</p>
 {% endfor %}
 {% endblock %}
 

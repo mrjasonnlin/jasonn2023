@@ -9,10 +9,11 @@ class UserForm(forms.ModelForm):
     fullName = forms.CharField(label='姓名', max_length=128)
     website = forms.URLField(label='個人網址', max_length=128)
     address = forms.CharField(label='住址', max_length=128)
+    sex = forms.CharField(label='性別', max_length=10)
 
     class Meta:
         model = User
-        fields = ['username', 'password', 'password2', 'fullName', 'website', 'address']
+        fields = ['username', 'password', 'password2', 'fullName', 'website', 'address', 'sex']
 
     def clean_password2(self):
         password = self.cleaned_data.get('password')
