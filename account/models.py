@@ -9,4 +9,3 @@ class User(AbstractUser):
 
     def __str__(self):
         return self.fullName + ' (' + self.username + ')'
-
